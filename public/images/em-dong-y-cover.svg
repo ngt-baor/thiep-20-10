@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="discBg" cx="38%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#ff6b8b" />
+      <stop offset="35%" stop-color="#c2185b" />
+      <stop offset="70%" stop-color="#880e4f" />
+      <stop offset="100%" stop-color="#4a0024" />
+    </radialGradient>
+
+    <!-- Gold Foil Gradient -->
+    <linearGradient id="goldFoil" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe082" />
+      <stop offset="30%" stop-color="#ffd54f" />
+      <stop offset="55%" stop-color="#ffb300" />
+      <stop offset="85%" stop-color="#fff8e1" />
+      <stop offset="100%" stop-color="#ffa000" />
+    </linearGradient>
+
+    <!-- Ring Shimmer -->
+    <radialGradient id="diamondShine" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="45%" stop-color="#ffe57f" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffab00" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Circular Disc Base -->
+  <circle cx="150" cy="150" r="148" fill="url(#discBg)" stroke="url(#goldFoil)" stroke-width="4" />
+
+  <!-- Outer Ornamental Ring -->
+  <circle cx="150" cy="150" r="138" fill="none" stroke="rgba(255, 255, 255, 0.35)" stroke-width="1.2" stroke-dasharray="4 3" />
+  <circle cx="150" cy="150" r="132" fill="none" stroke="url(#goldFoil)" stroke-width="1" opacity="0.6" />
+
+  <!-- Soft Ambient Floral/Heart Watermarks -->
+  <g opacity="0.18" fill="#ffffff">
+    <path d="M150 48 C145 36 128 36 124 48 C120 60 150 78 150 78 C150 78 180 60 176 48 C172 36 155 36 150 48 Z" transform="scale(0.8) translate(38, 20)" />
+    <path d="M150 48 C145 36 128 36 124 48 C120 60 150 78 150 78 C150 78 180 60 176 48 C172 36 155 36 150 48 Z" transform="rotate(90 150 150) scale(0.8) translate(38, 20)" />
+    <path d="M150 48 C145 36 128 36 124 48 C120 60 150 78 150 78 C150 78 180 60 176 48 C172 36 155 36 150 48 Z" transform="rotate(180 150 150) scale(0.8) translate(38, 20)" />
+    <path d="M150 48 C145 36 128 36 124 48 C120 60 150 78 150 78 C150 78 180 60 176 48 C172 36 155 36 150 48 Z" transform="rotate(270 150 150) scale(0.8) translate(38, 20)" />
+  </g>
+
+  <!-- Curving Top Arc Text: ĐỨC PHÚC x 911 -->
+  <path id="topArc" d="M 60,150 A 90,90 0 0,1 240,150" fill="none" />
+  <text font-family="'Cinzel', 'Playfair Display', 'Times New Roman', serif" font-size="13.5" font-weight="700" fill="url(#goldFoil)" letter-spacing="3.5" text-anchor="middle">
+    <textPath href="#topArc" startOffset="50%">ĐỨC PHÚC · 911</textPath>
+  </text>
+
+  <!-- Main Title: EM ĐỒNG Ý -->
+  <g transform="translate(150, 106)" text-anchor="middle">
+    <text font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="21" font-weight="800" fill="#ffffff" letter-spacing="3.2" filter="url(#softGlow)">
+      EM ĐỒNG Ý
+    </text>
+    <text font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="21" font-weight="800" fill="url(#goldFoil)" letter-spacing="3.2" dy="0">
+      EM ĐỒNG Ý
+    </text>
+  </g>
+
+  <!-- Subtitle: (I DO) with Stars -->
+  <g transform="translate(150, 132)" text-anchor="middle">
+    <text font-family="'Montserrat', 'Arial', sans-serif" font-size="12" font-weight="700" fill="#ffe0b2" letter-spacing="4">
+      ✦ I DO ✦
+    </text>
+  </g>
+
+  <!-- Two Intertwined Golden Wedding Rings -->
+  <g transform="translate(150, 194)" filter="url(#softGlow)">
+    <!-- Left Ring -->
+    <ellipse cx="-16" cy="0" rx="20" ry="14" fill="none" stroke="url(#goldFoil)" stroke-width="3.5" transform="rotate(-15 -16 0)" />
+    <!-- Right Ring -->
+    <ellipse cx="16" cy="0" rx="20" ry="14" fill="none" stroke="url(#goldFoil)" stroke-width="3.5" transform="rotate(15 16 0)" />
+    <!-- Diamond Sparkle on Ring Junction -->
+    <circle cx="0" cy="-6" r="14" fill="url(#diamondShine)" opacity="0.85" />
+    <path d="M 0 -14 L 2 -7 L 8 -6 L 2 -4 L 0 3 L -2 -4 L -8 -6 L -2 -7 Z" fill="#ffffff" />
+  </g>
+
+  <!-- Bottom Arch Label -->
+  <path id="bottomArc" d="M 70,150 A 80,80 0 0,0 230,150" fill="none" />
+  <text font-family="'Montserrat', sans-serif" font-size="9" font-weight="600" fill="#ffcdd2" letter-spacing="2.5" text-anchor="middle">
+    <textPath href="#bottomArc" startOffset="50%">OFFICIAL SOUNDTRACK</textPath>
+  </text>
+
+  <!-- Center Spindle Hole (Realistic Vinyl center ring) -->
+  <circle cx="150" cy="150" r="16" fill="#111111" stroke="#e0e0e0" stroke-width="3.5" />
+  <circle cx="150" cy="150" r="9" fill="#000000" />
+</svg>

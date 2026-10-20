@@ -178,7 +178,7 @@ class AmbientMusicBox {
       try {
         this.audio = new Audio("/audio/em-dong-y.m4a");
         this.audio.loop = true;
-        this.audio.preload = "auto";
+        this.audio.preload = "none";
         this.audio.volume = 0.8;
       } catch {
         this.audio = null;
@@ -461,6 +461,14 @@ export default function Home() {
     if (transitionCompletedRef.current) return;
     transitionCompletedRef.current = true;
     setCardRevealed(true);
+    if (!musicOn && musicBoxRef.current) {
+      try {
+        musicBoxRef.current.start();
+        setMusicOn(true);
+      } catch {
+        // safe fallback
+      }
+    }
     requestAnimationFrame(() => {
       letterRef.current?.scrollIntoView({ behavior: "auto", block: "start" });
       letterHeadingRef.current?.focus({ preventScroll: true });
@@ -483,12 +491,6 @@ export default function Home() {
       try {
         musicBoxRef.current.init();
         musicBoxRef.current.playDoorSwoosh();
-        if (!musicOn) {
-          window.setTimeout(() => {
-            musicBoxRef.current?.start();
-            setMusicOn(true);
-          }, 3600);
-        }
       } catch {
         // safe fallback
       }

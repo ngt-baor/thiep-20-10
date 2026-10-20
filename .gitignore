@@ -30,3 +30,6 @@ ANTIGRAVITY.md
 .DS_Store
 Thumbs.db
 output/playwright/
+scripts/
+docs/screenshots/
+docs/video-frames/

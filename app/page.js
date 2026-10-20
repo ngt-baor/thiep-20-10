@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import FlowerVideoTransition from "../components/FlowerVideoTransition";
+import FlowerBloomCanvas from "../components/FlowerBloomCanvas";
 
 // Natural petal variations for the falling effect
 const PETAL_TYPES = [
@@ -613,7 +613,7 @@ export default function Home() {
         Đi đến lời chúc
       </a>
 
-      <FlowerVideoTransition
+      <FlowerBloomCanvas
         ref={flowerBloomRef}
         onCardReveal={handleCardReveal}
         onTransitionEnd={handleTransitionEnd}
